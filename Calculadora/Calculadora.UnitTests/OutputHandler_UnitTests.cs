@@ -5,12 +5,6 @@ namespace Calculadora.UnitTests
 {
     public class OutputHandler_UnitTests
     {
-        private readonly OutputHandler _outputHandler;
-
-        public OutputHandler_UnitTests()
-        {
-            _outputHandler = new ();
-        }
 
         [Fact]
         public void GivenCallTo_GetOperationsMenu_ShouldContainOperations()
@@ -20,15 +14,17 @@ namespace Calculadora.UnitTests
             var subtraction = "Subtração";
             var division = "Divisão";
             var multiplication = "Multiplicação";
+            var lastOperations = "Últimas Operações";
 
             //act
-            string menu = _outputHandler.GetOperationsMenu();
+            string menu = OutputHandler.GetOperationsMenu();
 
             //assert
             Assert.Contains(sum, menu);
             Assert.Contains(subtraction, menu);
             Assert.Contains(division, menu);
             Assert.Contains(multiplication, menu);
+            Assert.Contains(lastOperations, menu);
         }
 
         [Fact]
@@ -41,7 +37,7 @@ namespace Calculadora.UnitTests
             operations.Add(new(3, 4, Domain.Enum.EOperationType.Multiplication));
 
             //act
-            string lastOperations = _outputHandler.GetLastOperations(operations);
+            string lastOperations = OutputHandler.GetLastOperations(operations);
 
             //assert
             Assert.Contains("Operação 1", lastOperations);
@@ -58,8 +54,16 @@ namespace Calculadora.UnitTests
             Assert.Contains("Resultado: 12", lastOperations);
         }
 
+        [Fact]
+        public void GivenCallTo_GetWelcomeMessage_ShouldContainOperations()
+        {
+            //arrange 
+            //act
+            string welcomeMessage = OutputHandler.GetWelcomeMessage();
 
-
-
+            //assert
+            Assert.Contains("Bem-vindo(a)", welcomeMessage);
+       
+        }
     }
 }
