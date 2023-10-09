@@ -1,18 +1,35 @@
-﻿namespace Calculadora.Domain
+﻿using Calculadora.Domain.Enum;
+
+namespace Calculadora.Domain
 {
-    public class Operations
+    public class Operation
     {
-        public int N1 { get; set; }
-        public int N2 { get; set; }
-        public int Result { get; set; }
-        public string Operation { get; set; }
-        public Operations(int n1, int n2, int result, string operation)
+        public int N1 { get; private set; }
+        public int N2 { get; private set; }
+        public int Result { get; private set; }
+        public EOperationType Type { get; private set; }
+        public Operation(int n1, int n2, EOperationType type)
         {
             N1 = n1;
             N2 = n2;
-            Operation = operation;
+            switch (type)
+            {
+                case EOperationType.Sum:
+                    Result = Sum(n1, n2);
+                    break;
+                case EOperationType.Subtraction:
+                    Result = Subtraction(n1, n2);
+                    break;
+                case EOperationType.Multiplication:
+                    Result = Multiplication(n1, n2);
+                    break;
+                case EOperationType.Division:
+                    Result = Division(n1, n2);
+                    break;
+            }
+            Type = type;
         }
-        public Operations()
+        public Operation()
         {
             
         }

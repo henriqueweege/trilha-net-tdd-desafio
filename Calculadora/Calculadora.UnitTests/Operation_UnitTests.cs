@@ -4,11 +4,6 @@ namespace Calculadora.UnitTests
 {
     public class Operation_UnitTests
     {
-        private readonly Operation _operations;
-        public Operation_UnitTests()
-        {
-            _operations = new Operation();
-        }
 
         #region Sum
 
@@ -29,10 +24,10 @@ namespace Calculadora.UnitTests
         {
             //arrange
             //act
-            var result = _operations.Sum(n1, n2);
+            var op = new Operation(n1, n2, Domain.Enum.EOperationType.Sum);
 
             //assert
-            Assert.Equal(n1 + n2, result);
+            Assert.Equal(n1 + n2, op.Result);
         }
 
     
@@ -57,10 +52,10 @@ namespace Calculadora.UnitTests
         {
             //arrange
             //act
-            var result = _operations.Subtraction(n1, n2);
+            var op = new Operation(n1, n2, Domain.Enum.EOperationType.Subtraction);
 
             //assert
-            Assert.Equal(n1 - n2, result);
+            Assert.Equal(n1 - n2, op.Result);
         }
 
        
@@ -85,10 +80,10 @@ namespace Calculadora.UnitTests
         {
             //arrange
             //act
-            var result = _operations.Multiplication(n1, n2);
+            var op = new Operation(n1, n2, Domain.Enum.EOperationType.Multiplication);
 
             //assert
-            Assert.Equal(n1 * n2, result);
+            Assert.Equal(n1 * n2, op.Result);
         }
 
         #endregion
@@ -112,11 +107,10 @@ namespace Calculadora.UnitTests
         {
             //arrange
             //act
-            var result = _operations.Division(n1, n2);
+            var op = new Operation(n1, n2, Domain.Enum.EOperationType.Division);
 
             //assert
-            Assert.Equal(n1 / n2, result);
-
+            Assert.Equal(n1 / n2, op.Result);
         }
         #endregion
     }
