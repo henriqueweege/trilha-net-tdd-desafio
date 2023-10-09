@@ -59,7 +59,7 @@ namespace Calculadora.UnitTests
         {
             //arrange 
             var operations = new List<Operation>();
-            var message = "Não foram realizadas operações";
+            var message = "Não foram realizadas operações.";
 
             //act
             string lastOperations = OutputHandler.GetLastOperations(operations);
