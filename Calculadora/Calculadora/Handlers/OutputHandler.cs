@@ -1,6 +1,6 @@
 ﻿namespace Calculadora.Handlers
 {
-    public class MenuHandler
+    public class OutputHandler
     {
         public string GetOperationsMenu()
         {

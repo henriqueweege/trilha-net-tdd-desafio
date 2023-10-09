@@ -3,12 +3,12 @@ using Calculadora.Handlers;
 
 namespace Calculadora.UnitTests
 {
-    public class Cache_UnitTests
+    public class CacheHandler_UnitTests
     {
         private readonly CacheHandler _cache;
-        public Cache_UnitTests()
+        public CacheHandler_UnitTests()
         {
-            _cache = new CacheHandler();
+            _cache = new ();
         }
 
         [Fact]
