@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calculadora
+namespace Calculadora.Handlers
 {
-    public class Cache
+    public class CacheHandler
     {
     }
 }
