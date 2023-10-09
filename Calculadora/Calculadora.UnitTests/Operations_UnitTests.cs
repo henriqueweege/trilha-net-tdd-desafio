@@ -15,6 +15,8 @@ namespace Calculadora.UnitTests
             _operations = new Operations(); 
         }
 
+        #region Sum
+
         [Theory]
         [InlineData(1, 2)]
         [InlineData(10, 20)]
@@ -76,5 +78,6 @@ namespace Calculadora.UnitTests
             //assert
             Assert.Equal(n1 + n2, result);
         }
+        #endregion
     }
 }
