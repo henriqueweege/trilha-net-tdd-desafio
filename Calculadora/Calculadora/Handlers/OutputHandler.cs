@@ -9,7 +9,7 @@ namespace Calculadora.Handlers
         {
             if(operations.Count == 0)
             {
-                return "Não foram realizadas operações";
+                return "Não foram realizadas operações.";
             }
             var toReturn = new StringBuilder();
             for (var i = 0; i < operations.Count; i++)
@@ -21,7 +21,7 @@ namespace Calculadora.Handlers
         }
 
         public static string GetOperationsMenu()
-            => $"Qual operação você gostaria de realizar? \n\n  1-Soma \n 2-Subtração \n 3-Multiplicação, \n 4-Divisão \n 0- Últimas Operações \n S- Sair";
+            => $"Qual operação você gostaria de realizar? \n\n 1- Soma \n 2- Subtração \n 3- Multiplicação, \n 4- Divisão \n 0- Últimas Operações \n S- Sair";
 
         public static string GetFirstNumberMessage()
         => "Por favor, digite o primeiro número: ";
