@@ -24,7 +24,7 @@ namespace Calculadora.UnitTests
         {
             //arrange
             //act
-            int result = _operations.Sum(n1, n2);
+            double result = _operations.Sum(n1, n2);
 
             //assert
             Assert.Equal(n1 + n2, result);
