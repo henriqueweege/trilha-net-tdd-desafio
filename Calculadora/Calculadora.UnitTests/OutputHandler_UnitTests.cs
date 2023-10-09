@@ -55,6 +55,20 @@ namespace Calculadora.UnitTests
         }
 
         [Fact]
+        public void GivenCallTo_GetLastOperations_ShouldReturnNoOperationMessage()
+        {
+            //arrange 
+            var operations = new List<Operation>();
+            var message = "Não foram realizadas operações";
+
+            //act
+            string lastOperations = OutputHandler.GetLastOperations(operations);
+
+            //assert
+            Assert.Equal(message, lastOperations);
+        }
+
+        [Fact]
         public void GivenCallTo_GetWelcomeMessage_ShouldContainOperations()
         {
             //arrange 
@@ -65,5 +79,30 @@ namespace Calculadora.UnitTests
             Assert.Contains("Bem-vindo(a)", welcomeMessage);
        
         }
+
+        [Fact]
+        public void GivenCallTo_GetSecondNumberMessage_ShouldContainOperations()
+        {
+            //arrange 
+            //act
+            string welcomeMessage = OutputHandler.GetSecondNumberMessage();
+
+            //assert
+            Assert.Contains("Por favor, digite o segundo número: ", welcomeMessage);
+
+        }
+
+        [Fact]
+        public void GivenCallTo_GetFirstNumberMessage_ShouldContainOperations()
+        {
+            //arrange 
+            //act
+            string welcomeMessage = OutputHandler.GetFirstNumberMessage();
+
+            //assert
+            Assert.Contains("Por favor, digite o primeiro número: ", welcomeMessage);
+
+        }
+
     }
 }
