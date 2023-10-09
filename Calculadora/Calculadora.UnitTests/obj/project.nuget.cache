@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DYNwONu+oAMDcuY92hq/yhg6xzHjASEhvjzJIWAO1ZE0FH5RLQkFqYmxrl+Ay2D2IeUgPdBxAZ32Blz8YaBRFA==",
+  "dgSpecHash": "AzSEuy4DB/cBTwNQvqx3/6lTUIMcESo6OLxAZ39QgGFoLKe/Sixdl8LCVYejvDXzcFzxEI55yUyDwAB7EU2ZXA==",
   "success": true,
   "projectFilePath": "D:\\DIO\\trilha-net-tdd-desafio\\Calculadora\\Calculadora.UnitTests\\Calculadora.UnitTests.csproj",
   "expectedPackageFiles": [
