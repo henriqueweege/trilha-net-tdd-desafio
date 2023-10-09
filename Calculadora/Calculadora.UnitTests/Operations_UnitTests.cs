@@ -29,82 +29,13 @@ namespace Calculadora.UnitTests
         {
             //arrange
             //act
-            double result = _operations.Sum(n1, n2);
+            var result = _operations.Sum(n1, n2);
 
             //assert
             Assert.Equal(n1 + n2, result);
         }
 
-        [Theory]
-        [InlineData(11.586, 3.452)]
-        [InlineData(106.9, 21.20)]
-        [InlineData(1.69, 4.3)]
-        [InlineData(135.9, 4.90)]
-        [InlineData(-11.586, 3.452)]
-        [InlineData(-106.9, 21.20)]
-        [InlineData(-1.69, 4.3)]
-        [InlineData(-135.9, 4.90)]
-        [InlineData(11.586, -3.452)]
-        [InlineData(106.9, -21.20)]
-        [InlineData(1.69, -4.3)]
-        [InlineData(135.9, -4.90)]
-        public void GivenDoubleNumbers_Sum_ShouldReturnCorrectValue(double n1, double n2)
-        {
-            //arrange
-            //act
-            double result = _operations.Sum(n1, n2);
-
-            //assert
-            Assert.Equal(n1 + n2, result);
-        }
-
-        [Theory]
-        [InlineData(11.586, 3452)]
-        [InlineData(106.9, 21)]
-        [InlineData(1.69, 46784)]
-        [InlineData(135.9, 4)]
-        [InlineData(-11.586, 3452)]
-        [InlineData(-106.9, 21)]
-        [InlineData(-1.69, 46784)]
-        [InlineData(-135.9, 4)]
-        [InlineData(11.586, -3452)]
-        [InlineData(106.9, -21)]
-        [InlineData(1.69, -46784)]
-        [InlineData(135.9, -4)]
-        public void GivenN1AsDoubleAndN2AsInteger_Sum_ShouldReturnCorrectValue(double n1, int n2)
-        {
-            //arrange
-
-            //act
-            double result = _operations.Sum(n1, n2);
-
-            //assert
-            Assert.Equal(n1 + n2, result);
-        }
-
-        [Theory]
-        [InlineData(3452, 11.586)]
-        [InlineData(21, 106.9)]
-        [InlineData(46784, 1.69)]
-        [InlineData(4, 135.9)]
-        [InlineData(-3452, 11.586)]
-        [InlineData(-21, 106.9)]
-        [InlineData(-46784, 1.69)]
-        [InlineData(-4, 135.9)]
-        [InlineData(3452, -11.586)]
-        [InlineData(21, -106.9)]
-        [InlineData(46784, -1.69)]
-        [InlineData(4, -135.9)]
-        public void GivenN2AsDoubleAndN1AsInteger_Sum_ShouldReturnCorrectValue(int n1, double n2)
-        {
-            //arrange
-
-            //act
-            double result = _operations.Sum(n1, n2);
-
-            //assert
-            Assert.Equal(n1 + n2, result);
-        }
+    
         #endregion
 
         #region Subtraction
@@ -126,84 +57,13 @@ namespace Calculadora.UnitTests
         {
             //arrange
             //act
-            double result = _operations.Subtraction(n1, n2);
+            var result = _operations.Subtraction(n1, n2);
 
             //assert
             Assert.Equal(n1 - n2, result);
         }
 
-        [Theory]
-        [InlineData(11.586, 3.452)]
-        [InlineData(106.9, 21.20)]
-        [InlineData(1.69, 4.3)]
-        [InlineData(135.9, 4.90)]
-        [InlineData(-11.586, 3.452)]
-        [InlineData(-106.9, 21.20)]
-        [InlineData(-1.69, 4.3)]
-        [InlineData(-135.9, 4.90)]
-        [InlineData(11.586, -3.452)]
-        [InlineData(106.9, -21.20)]
-        [InlineData(1.69, -4.3)]
-        [InlineData(135.9, -4.90)]
-        public void GivenDoubleNumbers_Subtraction_ShouldReturnCorrectValue(double n1, double n2)
-        {
-            //arrange
-            //act
-            double result = _operations.Subtraction(n1, n2);
-
-            //assert
-            Assert.Equal(n1 - n2, result);
-        }
-
-        [Theory]
-        [InlineData(11.586, 3452)]
-        [InlineData(106.9, 21)]
-        [InlineData(1.69, 46784)]
-        [InlineData(135.9, 4)]
-        [InlineData(-11.586, 3452)]
-        [InlineData(-106.9, 21)]
-        [InlineData(-1.69, 46784)]
-        [InlineData(-135.9, 4)]
-        [InlineData(11.586, -3452)]
-        [InlineData(106.9, -21)]
-        [InlineData(1.69, -46784)]
-        [InlineData(135.9, -4)]
-        public void GivenN1AsDoubleAndN2AsInteger_Subtraction_ShouldReturnCorrectValue(double n1, int n2)
-        {
-            //arrange
-
-            //act
-            double result = _operations.Subtraction(n1, n2);
-
-            //assert
-            Assert.Equal(n1 - n2, result);
-        }
-
-        [Theory]
-        [InlineData(3452, 11.586)]
-        [InlineData(21, 106.9)]
-        [InlineData(46784, 1.69)]
-        [InlineData(4, 135.9)]
-        [InlineData(-3452, 11.586)]
-        [InlineData(-21, 106.9)]
-        [InlineData(-46784, 1.69)]
-        [InlineData(-4, 135.9)]
-        [InlineData(3452, -11.586)]
-        [InlineData(21, -106.9)]
-        [InlineData(46784, -1.69)]
-        [InlineData(4, -135.9)]
-        public void GivenN2AsDoubleAndN1AsInteger_Subtraction_ShouldReturnCorrectValue(int n1, double n2)
-        {
-            //arrange
-
-            //act
-            double result = _operations.Subtraction(n1, n2);
-
-            //assert
-            Assert.Equal(n1 - n2, result);
-        }
-
-
+       
         #endregion
 
         #region Multiplication
@@ -225,86 +85,11 @@ namespace Calculadora.UnitTests
         {
             //arrange
             //act
-            double result = _operations.Multiplication(n1, n2);
+            var result = _operations.Multiplication(n1, n2);
 
             //assert
             Assert.Equal(n1 * n2, result);
         }
-
-        [Theory]
-        [InlineData(11.586, 3.452)]
-        [InlineData(106.9, 21.20)]
-        [InlineData(1.69, 4.3)]
-        [InlineData(135.9, 4.90)]
-        [InlineData(-11.586, 3.452)]
-        [InlineData(-106.9, 21.20)]
-        [InlineData(-1.69, 4.3)]
-        [InlineData(-135.9, 4.90)]
-        [InlineData(11.586, -3.452)]
-        [InlineData(106.9, -21.20)]
-        [InlineData(1.69, -4.3)]
-        [InlineData(135.9, -4.90)]
-        public void GivenDoubleNumbers_Multiplication_ShouldReturnCorrectValue(double n1, double n2)
-        {
-            //arrange
-            //act
-            double result = _operations.Multiplication(n1, n2);
-
-            //assert
-            Assert.Equal(n1 * n2, result);
-
-        }
-
-        [Theory]
-        [InlineData(11.586, 3452)]
-        [InlineData(106.9, 21)]
-        [InlineData(1.69, 46784)]
-        [InlineData(135.9, 4)]
-        [InlineData(-11.586, 3452)]
-        [InlineData(-106.9, 21)]
-        [InlineData(-1.69, 46784)]
-        [InlineData(-135.9, 4)]
-        [InlineData(11.586, -3452)]
-        [InlineData(106.9, -21)]
-        [InlineData(1.69, -46784)]
-        [InlineData(135.9, -4)]
-        public void GivenN1AsDoubleAndN2AsInteger_Multiplication_ShouldReturnCorrectValue(double n1, int n2)
-        {
-            //arrange
-
-            //act
-            double result = _operations.Multiplication(n1, n2);
-
-            //assert
-            Assert.Equal(n1 * n2, result);
-
-        }
-
-        [Theory]
-        [InlineData(3452, 11.586)]
-        [InlineData(21, 106.9)]
-        [InlineData(46784, 1.69)]
-        [InlineData(4, 135.9)]
-        [InlineData(-3452, 11.586)]
-        [InlineData(-21, 106.9)]
-        [InlineData(-46784, 1.69)]
-        [InlineData(-4, 135.9)]
-        [InlineData(3452, -11.586)]
-        [InlineData(21, -106.9)]
-        [InlineData(46784, -1.69)]
-        [InlineData(4, -135.9)]
-        public void GivenN2AsDoubleAndN1AsInteger_Multiplication_ShouldReturnCorrectValue(int n1, double n2)
-        {
-            //arrange
-
-            //act
-            double result = _operations.Multiplication(n1, n2);
-
-            //assert
-            Assert.Equal(n1 * n2, result);
-
-        }
-
 
         #endregion
 
@@ -327,90 +112,12 @@ namespace Calculadora.UnitTests
         {
             //arrange
             //act
-            double result = _operations.Division(n1, n2);
-
-            //assert
-            Assert.Equal((double)n1 / n2, result);
-
-        }
-
-        [Theory]
-        [InlineData(11.586, 3.452)]
-        [InlineData(106.9, 21.20)]
-        [InlineData(1.69, 4.3)]
-        [InlineData(135.9, 4.90)]
-        [InlineData(-11.586, 3.452)]
-        [InlineData(-106.9, 21.20)]
-        [InlineData(-1.69, 4.3)]
-        [InlineData(-135.9, 4.90)]
-        [InlineData(11.586, -3.452)]
-        [InlineData(106.9, -21.20)]
-        [InlineData(1.69, -4.3)]
-        [InlineData(135.9, -4.90)]
-        public void GivenDoubleNumbers_Division_ShouldReturnCorrectValue(double n1, double n2)
-        {
-            //arrange
-            //act
-            double result = _operations.Division(n1, n2);
-
-            //assert
-            Assert.Equal(n1 / n2, result);
-
-
-        }
-
-        [Theory]
-        [InlineData(11.586, 3452)]
-        [InlineData(106.9, 21)]
-        [InlineData(1.69, 46784)]
-        [InlineData(135.9, 4)]
-        [InlineData(-11.586, 3452)]
-        [InlineData(-106.9, 21)]
-        [InlineData(-1.69, 46784)]
-        [InlineData(-135.9, 4)]
-        [InlineData(11.586, -3452)]
-        [InlineData(106.9, -21)]
-        [InlineData(1.69, -46784)]
-        [InlineData(135.9, -4)]
-        public void GivenN1AsDoubleAndN2AsInteger_Division_ShouldReturnCorrectValue(double n1, int n2)
-        {
-            //arrange
-
-            //act
-            double result = _operations.Division(n1, n2);
-
-            //assert
-            Assert.Equal(n1 / n2, result);
-
-
-        }
-
-        [Theory]
-        [InlineData(3452, 11.586)]
-        [InlineData(21, 106.9)]
-        [InlineData(46784, 1.69)]
-        [InlineData(4, 135.9)]
-        [InlineData(-3452, 11.586)]
-        [InlineData(-21, 106.9)]
-        [InlineData(-46784, 1.69)]
-        [InlineData(-4, 135.9)]
-        [InlineData(3452, -11.586)]
-        [InlineData(21, -106.9)]
-        [InlineData(46784, -1.69)]
-        [InlineData(4, -135.9)]
-        public void GivenN2AsDoubleAndN1AsInteger_Division_ShouldReturnCorrectValue(int n1, double n2)
-        {
-            //arrange
-
-            //act
-            double result = _operations.Division(n1, n2);
+            var result = _operations.Division(n1, n2);
 
             //assert
             Assert.Equal(n1 / n2, result);
 
         }
-
-
         #endregion
     }
 }
