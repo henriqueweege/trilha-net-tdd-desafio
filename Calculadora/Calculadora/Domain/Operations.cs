@@ -9,5 +9,6 @@ namespace Calculadora.Domain
     public class Operations
     {
         public int Sum(int n1, int n2) => n1 + n2;
+        public double Sum(double n1, double n2) => n1 + n2;
     }
 }

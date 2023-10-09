@@ -16,7 +16,7 @@ namespace Calculadora.UnitTests
         }
 
         [Fact]
-        public void GivenIntegerNumber_Sum_ShouldReturnCorrectValue()
+        public void GivenIntegerNumbers_Sum_ShouldReturnCorrectValue()
         {
             //arrange
             var n1 = 1;
@@ -24,6 +24,20 @@ namespace Calculadora.UnitTests
 
             //act
             int result = _operations.Sum(n1, n2);
+
+            //assert
+            Assert.Equal(n1 + n2, result);
+        }
+
+        [Fact]
+        public void GivenDoubleNumbers_Sum_ShouldReturnCorrectValue()
+        {
+            //arrange
+            var n1 = 1.1;
+            var n2 = 2.2;
+
+            //act
+            double result = _operations.Sum(n1, n2);
 
             //assert
             Assert.Equal(n1 + n2, result);
