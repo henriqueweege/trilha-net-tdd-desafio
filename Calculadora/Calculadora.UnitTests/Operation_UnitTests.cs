@@ -2,12 +2,12 @@
 
 namespace Calculadora.UnitTests
 {
-    public class Operations_UnitTests
+    public class Operation_UnitTests
     {
-        private readonly Operations _operations;
-        public Operations_UnitTests()
+        private readonly Operation _operations;
+        public Operation_UnitTests()
         {
-            _operations = new Operations();
+            _operations = new Operation();
         }
 
         #region Sum

@@ -15,8 +15,19 @@ namespace Calculadora.UnitTests
             _cache = new CacheHandler();
         }
 
-        //[Fact]
-        //public void GivenOperationToSave_
+        [Fact]
+        public void GivenOperationToSave_CacheHandler_ShouldSave() 
+        {
+            //arrange
+            //var opToSave = new Operation
+
+            //act
+
+
+            //assert
+
+
+        }
 
 
     }
